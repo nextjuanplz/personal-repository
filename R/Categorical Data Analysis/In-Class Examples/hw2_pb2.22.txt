@@ -1,0 +1,242 @@
+> tb1 <- matrix( c(105, 8, 12, 2, 18, 19, 47, 52, 0, 13), nrow=5, byrow=T );tb1
+     [,1] [,2]
+[1,]  105    8
+[2,]   12    2
+[3,]   18   19
+[4,]   47   52
+[5,]    0   13
+> g.test(tb1)
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  105    8
+[2,]   12    2
+[3,]   18   19
+[4,]   47   52
+[5,]    0   13
+
+The test statistic is  96.5369 .
+There are  4  degrees of freedom.
+The p-value is  0 .
+
+
+> p1<-tb1[1:2,];g.test(p1)
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  105    8
+[2,]   12    2
+
+The test statistic is  0.752952 .
+There are  1  degrees of freedom.
+The p-value is  0.3855433 .
+> p2<-rbind(colSums(p1),tb1[3,]);p2
+     [,1] [,2]
+[1,]  117   10
+[2,]   18   19
+> g.test(p2)
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  117   10
+[2,]   18   19
+
+The test statistic is  31.7399 .
+There are  1  degrees of freedom.
+The p-value is  1.76267e-08 .
+> p3<-rbind(colSums(p2),tb1[4,]);g.test(p3)
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  135   29
+[2,]   47   52
+
+The test statistic is  34.7745 .
+There are  1  degrees of freedom.
+The p-value is  3.701954e-09 .
+
+
+> p4<-rbind(colSums(p3),tb1[5,]);g.test(p4)
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  182   81
+[2,]    0   13
+
+The test statistic is  29.2696 .
+There are  1  degrees of freedom.
+The p-value is  6.297595e-08 .
+
+
+> g1<-g.test(p1);g1
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  105    8
+[2,]   12    2
+
+The test statistic is  0.752952 .
+There are  1  degrees of freedom.
+The p-value is  0.3855433 .
+
+
+$expected
+          [,1]     [,2]
+[1,] 104.10236 8.897638
+[2,]  12.89764 1.102362
+
+$test.stat
+[1] 0.7529516
+
+$p.value
+[1] 0.3855433
+
+> g2<-g.test(p2);g2
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  117   10
+[2,]   18   19
+
+The test statistic is  31.7399 .
+There are  1  degrees of freedom.
+The p-value is  1.76267e-08 .
+
+
+$expected
+          [,1]      [,2]
+[1,] 104.54268 22.457317
+[2,]  30.45732  6.542683
+
+$test.stat
+[1] 31.73986
+
+$p.value
+[1] 1.76267e-08
+
+> g3<-g.test(p3);g3
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  135   29
+[2,]   47   52
+
+The test statistic is  34.7745 .
+There are  1  degrees of freedom.
+The p-value is  3.701954e-09 .
+
+
+$expected
+          [,1]     [,2]
+[1,] 113.49049 50.50951
+[2,]  68.50951 30.49049
+
+$test.stat
+[1] 34.77447
+
+$p.value
+[1] 3.701954e-09
+
+> g4<-g.test(p4);g4
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  182   81
+[2,]    0   13
+
+The test statistic is  29.2696 .
+There are  1  degrees of freedom.
+The p-value is  6.297595e-08 .
+
+
+$expected
+           [,1]      [,2]
+[1,] 173.427536 89.572464
+[2,]   8.572464  4.427536
+
+$test.stat
+[1] 29.2696
+
+$p.value
+[1] 6.297595e-08
+
+> g1
+$expected
+          [,1]     [,2]
+[1,] 104.10236 8.897638
+[2,]  12.89764 1.102362
+
+$test.stat
+[1] 0.7529516
+
+$p.value
+[1] 0.3855433
+
+> g1<-g.test(p1)$test.stat;g1
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  105    8
+[2,]   12    2
+
+The test statistic is  0.752952 .
+There are  1  degrees of freedom.
+The p-value is  0.3855433 .
+
+
+[1] 0.7529516
+> g2<-g.test(p2)$test.stat;g2
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  117   10
+[2,]   18   19
+
+The test statistic is  31.7399 .
+There are  1  degrees of freedom.
+The p-value is  1.76267e-08 .
+
+
+[1] 31.73986
+> g3<-g.test(p3)$test.stat;g3
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  135   29
+[2,]   47   52
+
+The test statistic is  34.7745 .
+There are  1  degrees of freedom.
+The p-value is  3.701954e-09 .
+
+
+[1] 34.77447
+> g4<-g.test(p4)$test.stat;g4
+G-Test for Contingency Tables
+
+Data:
+     [,1] [,2]
+[1,]  182   81
+[2,]    0   13
+
+The test statistic is  29.2696 .
+There are  1  degrees of freedom.
+The p-value is  6.297595e-08 .
+
+
+[1] 29.2696
+> g1+g2+g3+g4
+[1] 96.53689
+> 

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1500584740 source:c:\users\juan\dropbox\school\university of central florida\clubs & labs\trg\driving\coding\speed\speed\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+

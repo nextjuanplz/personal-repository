@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1475614507 source:c:\users\juan\dropbox\school\university of central florida\2016 - 2017\fall 2016\cop 3223c\homework\hw #3\hw #3 - juan m alzate vanegas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

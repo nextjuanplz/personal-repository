@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1490834327 source:e:\users\nextjuanplz\dropbox\school\university of central florida\2016 - 2017\spring 2017\cop 3502c\recitations\rp4\duck\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1490594658 source:c:\users\juan\dropbox\school\university of central florida\2016 - 2017\spring 2017\cop 3502c\programs\p5\binary belle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
